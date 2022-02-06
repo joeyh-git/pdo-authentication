@@ -30,3 +30,136 @@ html {
 body {
     background-color: $ice-200;
 }
+
+body {
+    background-color: $ice-200;
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    .account-actions {
+        width: 100%;
+        padding: 0 15px;
+
+        .account-message-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 10px 0 10px 25px;
+            margin-bottom: 20px;
+            font: 0.87rem $title;
+            letter-spacing: 1px;
+            border-radius: 5px;
+        } .error {
+            border: 1px solid $error-200;
+            background-color: $error-100;
+        } .success {
+            border: 1px solid $success-200;
+            background-color: $success-100;
+        }
+
+        .account-actions-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 25px 25px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px;
+            box-shadow: #0000001a 0px 1px 2px;
+            border-radius: 5px;
+            background-color: $ice-100;
+
+            .account-actions-body {
+                text-align: center;
+                .action-title {
+                    padding: 0 0 15px 0;
+                    font: 1.1rem $title;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    text-align: left;
+                    color: $accent-100;
+                }
+                .form-row {
+                    display: grid;
+                    .input-container {
+                        width: 100%;
+                        label {
+                            display: block;
+                            text-align: left;
+                            font: 0.97rem $text;
+                            letter-spacing: 0.7px;
+                            color: $text-200;
+                        }
+
+                        input[type=text],
+                        input[type=password] {
+                            width: 100%;
+                            margin: 5px 0 15px 0;
+                            padding: 0.6rem 0 0.6rem 0.5rem;
+                            font: 0.96rem $text;
+                            letter-spacing: 0.5px;
+                            color: $text-100;
+                            outline: none;
+                            border: none;
+                            border-radius: 3px;
+                            background-color: $ice-500;
+                            transition: all 0.2s;
+                        } input[type=text]:hover, input[type=text]:focus,
+                        input[type=password]:hover, input[type=password]:focus {
+                            background-color: $ice-600;
+                            color: $text-200;
+                        }
+                    }
+                }
+                
+                .submitBtn {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 15px;
+                    padding: 8px 0;
+                    position: relative;
+                    font: 0.93rem $text;
+                    outline: none;
+                    border-radius: 5px;
+                    border: 0.13rem solid $ice-600;
+                    background-color: $ice-300;
+                    color: $text-100;
+                    opacity: 0.6;
+                    transition: all 0.25s;
+                } .submitBtn:hover {
+                    cursor: pointer;
+                    border: 0.13rem solid $accent-100;
+                    background-color: $ice-500;
+                    color: $accent-100;
+                    opacity: 1;
+                }
+
+                .action-link {
+                    font: 0.85rem $text;
+                    text-align: center;
+                    text-decoration: none;
+                    color: $text-100;
+                    transition: all 0.2s;
+                } .action-link:hover {
+                    color: $accent-100;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 500px) {
+    main {
+        .account-actions {
+            .account-actions-container {
+                .account-actions-body {
+                    #double-input {
+                        display: grid;
+                        gap: 10px;
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+            }
+        }
+    }    
+} 
